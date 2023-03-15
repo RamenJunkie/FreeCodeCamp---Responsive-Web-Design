@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform!</p>
+
+    <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+      
+      
+      <fieldset>
+        <label id="name-label" for="name">Enter Your Name: <input id="name" name="name" type="text" placeholder="Name" required /></label>
+        <label id="email-label" for="email">Enter Your Email: <input id="email" name="email" type="email" required placeholder="Email" /></label>
+        <label id="number-label" for="number">Age (Optional): <input id="number" name="number" placeholder="20" type="number" min="13" max="120" /></label>
+      </fieldset>
+
+
+      <fieldset>
+        <label for="concerts-yes"><input id="concerts-yes" type="radio" name="concerts" class="inline" value="concerts-yes"/> I don't go to concerts.</label>
+        <label for="concerts-no"><input id="concerts-no" type="radio" name="concerts" class="inline" 
+value="concerts-no" /> I go to concerts.</label>
+
+        <label for="newsletter">
+          <input id="newsletter" type="checkbox" required name="newsletter" class="inline" value="accept_newsletter"> I would like to sign up for the email newsletter.
+        </label>
+
+
+        <label for="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" value="accept_tos"> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+        </label>
+      </fieldset>
+
+
+      <fieldset>
+        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+        
+        <label id="dropdown-label" for="dropdown">Which is your favorite?
+          <select id="dropdown" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Aurora</option>
+            <option value="2">CHVRCHES</option>
+            <option value="3">Sigrid</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="bio">Additional Comments (Optional):
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I also like..."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
